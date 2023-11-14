@@ -6,7 +6,7 @@ int main() { // ana al a7mar
     // creating two variables of type integer for the for loops
     int i,j;
     // creating a variable of type float
-    float max;
+    int max;
     // printing to the user to enter the number of users
     printf ("Please specify number of rows: ");
     // reading in the the number entered from the user and saving it to the variable numrows
@@ -16,9 +16,9 @@ int main() { // ana al a7mar
     // if statment checking if the number is even by seeing if it produces a remainder of 0 when divided by 2
     if (numrows % 2 == 0) {
         // add 1 to the max for the patern to not repeat on even numbers
-        max += 1;
+        // max += 1;
         // for loop that keeps going until it reaches numrows value, this for loop creates every row
-        for (i = 1; i <= numrows; i++) {
+        for (i = 1; i <= numrows-1; i++) {
             // if statment that checks if i is less than the value of max
             if (i <= max) {
                 // for loop in the true value of the if statment that decrements from the value of numrows to 1, this for loop creates the first half rows which increase in size each row
@@ -37,7 +37,7 @@ int main() { // ana al a7mar
                 // for loop in the false value of the if statment that increments from 1 till it reaches the value of numrows, this for loop creates the last half rows which decrease in size each row
                 for (j = 1; j <= numrows; j++){
                     // if statment that checks if i value is larger than j + 1
-                    if (i > j + 1)
+                    if (i > j - 1)
                         // printing a space in the true value of the if statment 
                         printf (" ");
                     else
